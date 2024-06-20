@@ -1,0 +1,246 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #0c132a, #11345e);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background: linear-gradient(45deg, #11345e, #0c132a);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand h1 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.navbar-brand p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #3498db;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header {
+    padding: 80px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info {
+    text-align: left;
+}
+
+header img {
+    border-radius: 50%;
+    max-width: 275px;
+    border: 4px solid #3498db;
+    margin-bottom: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.download-button:hover {
+    background-color: #1e4679;
+}
+
+/* Estilos de las secciones restantes */
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+section p {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin-bottom: 5px;
+}
+
+.bar {
+    height: 10px;
+    background-color: #3498db;
+}
+
+.barc {
+    height: 10px;
+    background-color: #0b4972;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.project-content {
+    flex: 1; 
+}
+
+.project img {
+    max-width: 250px;
+    border-radius: 5px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item img {
+    width: 30px; /* Ajusta el tamaño según tus necesidades */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contact-item a {
+    font-size: 18px;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-item a:hover {
+    color: #1e4679;
+}
+
+.project-content a {
+    font-size: 18px;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-content a:hover {
+    color: #1e4679;
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #bbb;
+    margin: 0;
+}
+
+.imgp {
+    max-width: 50px;
+    max-height: 100px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer img {
+    height: 35px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 5px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0b4972; /* Color de la pista de la barra de desplazamiento */
+}
