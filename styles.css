@@ -257,6 +257,7 @@ footer img {
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        display: block;
     }
 
     .navbar-brand a {
