@@ -244,3 +244,104 @@ footer img {
 ::-webkit-scrollbar-track {
     background-color: #0b4972; /* Color de la pista de la barra de desplazamiento */
 }
+
+@media (max-width: 920px) {
+    .navbar-brand {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        background: linear-gradient(45deg, #11345e, #0c132a);
+        padding: 15px 20px;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand .view-button {
+        margin-bottom: 0; /* Para eliminar el margen inferior del último botón */
+    }
+
+    .nav-links {
+        display: none; /* Oculta el menú completo en pantallas pequeñas */
+    }
+
+    /*******************************/
+    .header-content {
+        flex-direction: column; /* Cambia a dirección columna para apilar elementos */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .header-info {
+        text-align: center; /* Centra el texto */
+        margin-bottom: 20px; /* Espaciado inferior */
+    }
+
+    .header-info h1 {
+        font-size: 24px; /* Tamaño del nombre */
+        margin-bottom: 5px; /* Espaciado inferior del nombre */
+    }
+
+    .header-info p {
+        font-size: 14px; /* Tamaño del texto */
+        color: #bbb; /* Color del texto */
+        margin-bottom: 10px; /* Espaciado inferior del texto */
+    }
+
+    .navbar-brand {
+        flex-direction: column; /* Alinea los botones verticalmente */
+        align-items: center; /* Centra los botones */
+        margin-bottom: 20px; /* Espaciado inferior de los botones */
+    }
+
+    .navbar-brand .download-button,
+    .navbar-brand .view-button {
+        width: 100%; /* Ancho completo */
+        margin-bottom: 10px; /* Espaciado inferior entre botones */
+    }
+
+    header img {
+        max-width: 50%; /* Imagen responsiva */
+        border-radius: 50%; /* Borde redondeado */
+        border: 4px solid #3498db; /* Borde y color */
+    }
+
+    section {
+        padding-left: 20px; /* Añade margen izquierdo */
+        padding-right: 20px; /* Añade margen derecho */
+    }
+
+
+    /*****************************/
+    .project {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Centra el texto dentro del contenedor */
+        margin-bottom: 40px;
+    }
+    
+    .project-content {
+        flex: 1; /* Aprovecha todo el espacio disponible */
+        margin-bottom: 20px; /* Espacio entre los proyectos */
+    }
+    
+    .project img {
+        max-width: 250px;
+        border-radius: 5px;
+        margin-bottom: 10px; /* Espacio adicional bajo la imagen */
+    }
+    
+    .project hr {
+        width: 100%;
+        margin-top: 20px; /* Espacio superior al hr */
+        margin-bottom: 20px; /* Espacio inferior al hr */
+    }
+}
