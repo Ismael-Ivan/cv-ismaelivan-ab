@@ -1,0 +1,37 @@
+.card:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.progress-bar {
+    transition: width 2s ease-in-out;
+    font-weight: bold;
+}
+
+footer a {
+    color: #f1f1f1;
+}
+
+footer a:hover {
+    color: #cfcfcf;
+}
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .text-muted {
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.dark-mode .list-group-item {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
