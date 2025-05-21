@@ -3,42 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Ismael Iván A. B.</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Curriculum Ismael Iván Aucapina Benalcázar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <a href="docs/Curriculum Vitae - Ismael Iván.pdf" download class="download-button">Descargar CV</a>
-                <a href="docs/Curriculum Vitae - Ismael Iván.pdf" class="download-button">Visualizar CV</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#acercademi">Acerca de mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <!--<li><a href="#hobbies">Hobbies</a></li>-->
-            </ul>
-        </nav>
 
-        <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="header-info">
-                    <h1>Ismael Iván Aucapina Benalcázar</h1>
-                    <p>Técnico en Sistemas Microinformáticos y Redes</p>
-                    <p>Desarrollador y Mantenimiento Web</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-aos="fade-down">
+        <div class="container-fluid">
+            <div class="d-flex gap-2">
+                <a class="btn btn-outline-light" id="toggle-dark"><i class="fa-solid fa-moon"></i></a>
+                <a href="docs/Curriculum - Ismael Iván Aucapina Benalcázar.pdf" class="btn btn-outline-light"><i class="fa-solid fa-eye"></i> Curriculum</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#educación">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <!-- Sección Home -->
+        <section id="home" class="mb-5" data-aos="fade-up">
+            <div class="row align-items-center">
+                <!-- Columna izquierda -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h1 class="display-4">Ismael Iván Aucapina Benalcázar</h1>
+                    <h3 class="text-muted">Desarrollador de Aplicaciones Web · Técnico en Sistemas Microinformáticos y Redes</h3>
                 </div>
-                <img src="images/Img-perfil.jpg" alt="Foto de Perfil">
-            </div>
-        </header>
 
-        <section id="acercademi">
-            <h2>Acerca de mí</h2>
+                <!-- Columna derecha -->
+                <div class="col-md-6 text-center">
+                    <a href="#">
+                        <img src="images/img-perfil.png" alt="Foto de perfil" class="img-fluid rounded-circle shadow" style="max-width: 250px; border: 2px solid white;">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi" class="mb-5" data-aos="fade-up">
+            <h2 class="mb-3">Sobre mí</h2>
             <p>Soy un joven que le encanta el ámbito de la informática, videojuegos y música. Mi enfoque se centra en buscar nuevas experiencias laborales para tener más conocimientos en nuevos ámbitos, para luego aplicarlas en futuros proyectos y trabajos.
                 <br>
                 <br>Me adapto fácilmente al trabajo en equipo, me encanta la organización, y la puntualidad en hacer y entregar proyectos. Tengo mucha paciencia, me gusta investigar y obtener información, para tener más conocimientos sobre como mejorar los trabajos.
@@ -57,61 +89,37 @@
             </p>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <img src="images/email.png" alt="Gmail">
-                    <p>Email: <a href="mailto:tu@gmail.com">aucaisma12@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <img src="images/telefono.png" alt="Teléfono">
-                    <p>Teléfono: <a href="tel:+34642125575">+34 642 12 55 75</a></p>
-                </div>
-                <div class="contact-item">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/ismael-iv%C3%A1n-aucapina-benalc%C3%A1zar-b450912b9/" target="_blank">Ismael Iván Aucapina Benalcázar</a></p>
-                </div>
-                <div class="contact-item">
-                    <img src="images/github.png" alt="GitHub">
-                    <p>Github: <a href="https://github.com/Ismael-Ivan/" target="_blank">Ismael-Ivan</a></p>
-                </div>
-            </div>
-        </section>
+        <!-- Sección Educación -->
+        <section id="educación" class="mb-5" data-aos="fade-right">
+            <h2 class="mb-3">Educación</h2>
 
-        <section id="educacion">
-            <h2>Educación</h2>
+            <h5>Ciclo Formativo Grado Superior - Institut Rafael Campalans (2023 - 2025)</h5>
+            <p>CFGS Desarrollador de Aplicaciones Web.</p>
 
-            <h3>Ciclo Formativo Grado Superior - Institut Rafael Campalans (2023 - Actualidad)</h3>
-            <p>CFGS Desarrollador de Aplicaciones Multiplaforma (1r año) y Web (2º año).</p>
-
-            <h3>Ciclo Formativo Grado Medio - Institut Rafael Campalans (2021 - 2023)</h3>
+            <h5>Ciclo Formativo Grado Medio - Institut Rafael Campalans (2021 - 2023)</h5>
             <p>CFGM Técnico en Sistemas Microinformáticos y Redes.</p>
 
-            <h3>ESO - Institut Salvador Sunyer i Aimeric (2016 - 2020)</h3>
+            <h5>ESO - Institut Salvador Sunyer i Aimeric (2016 - 2020)</h5>
             <p>Educación Secundaria Obligatoria.</p>
         </section>
 
-        <section id="experiencia">
-            <h2>Experiencia Laboral</h2>
+        <!-- Sección Experiencia -->
+        <section id="experiencia" class="mb-5" data-aos="fade-left">
+            <h2 class="mb-3">Experiencia Laboral</h2>
 
-            <h3>Desarrollo de Aplicaciones Web - Aceena (2024 - 2025)</h3>
-            <p>Prácticas como Desarrollar de Aplicaciones Web (383h). Hice diferentes actividades, como:</p>
-            <ul>
-                <li>Utilitzación de <i>APIs</i> de Flespi para automatizar dispositivos de la empresa.</li>
-                <li>Creación de un diagrama de casos de usos.</li>
-                <li>Creación de un diseño de la página web para mostrar datos correctamente y ser responsive independientemente del dispositivo.</li>
-                <li>Creación de un programa C#.</li>
-                <li>Convertir el programa C# a JavaScript para mostrar datos a través de una página web HTML y CSS.</li>
-                <li>Recomendaciones para ampliar la automatización de la empresa.</li>
+            <h5>Tracmove Tracking Sports - Desarrollador de Aplicaciones Web (2024 - Actualidad)</h5>
+            <ul class="mt-2">
+                <li>Uso de <i>APIs</i> para automatizar dispositivos de la empresa.</li>
+                <li>Elaboración de un diagrama de casos de uso.</li>
+                <li>Rediseño completo de la página web corporativa.</li>
+                <li>Desarrollo de una aplicación pequeña en C#.</li>
+                <li>Creación de una aplicación web utilizando Laravel.</li>
+                <li>Asesoría en social media, diseño y organización para el crecimiento de la empresa.</li>
             </ul>
 
-            <br>
-            <br>
-            
-            <h3>Técnico en Sistemas Microinformáticos y Redes - Institut Salvador Sunyer i Aimeric (2022 - 2023)</h3>
-            <p>Prácticas como Técnico en Sistemas Microinformáticos y Redes (383h). Hice diferentes actividades, como:</p>
-            <ul>
+            <h5>Institut Salvador Sunyer i Aimeric - Técnico en Sistemas Microinformáticos y Redes (2022 - 2023)</h5>
+            <small>Prácticas como Técnnico en Sistema Microinformáticos y Redes (383h).</small>
+            <ul class="mt-2">
                 <li>Reparación y resolución de problemas en equipos tanto ámbito <i>software</i> como <i>hardware</i>.</li>
                 <li>Conexión de equipos y dominios a través de las IPs y DNS.</li>
                 <li>Aplicar Directivas de Grupos en Equipos con GPOs.</li>
@@ -119,257 +127,276 @@
             </ul>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="mb-5" data-aos="fade-right">
+            <h2 class="mb-4">Habilidades</h2>
 
-            <h3>Niveles de lenguajes de programación:</h3>
-            <br>
-            <div class="skills">
-                <div class="skill">
-                    <p>HTML</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
+            <!-- Categoría: Lenguajes de programación -->
+            <h4 class="mt-4">Lenguajes de programación</h4>
+            <div class="mb-3">
+                <label>HTML</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-value="90">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>CSS</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>PHP</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="75">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>JavaScript</label>
+                <div class="progress">
+                    <div class="progress-bar bg-warning text-dark" style="width: 0%;" data-value="65">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>C#</label>
+                <div class="progress">
+                    <div class="progress-bar bg-warning text-dark" style="width: 0%;" data-value="55">0%</div>
                 </div>
             </div>
 
-            <div class="skills">
-                <div class="skill">
-                    <p>CSS</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
+            <!-- Categoría: Ofimática -->
+            <h4 class="mt-4">Ofimática</h4>
+            <div class="mb-3">
+                <label>Procesadores de texto</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Presentaciones</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Hojas de cálculo</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">00%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Base de datos</label>
+                <div class="progress">
+                <div class="progress-bar bg-success" style="width: 0%;" data-value="75">0%</div>
                 </div>
             </div>
 
-            <div class="skills">
-                <div class="skill">
-                    <p>JavaScript</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 80%;"></div>
-                    </div>
+            <!-- Categoría: Sistemas operativos, software y herramientas -->
+            <h4 class="mt-4">Sistemas operativos, software y herramientas</h4>
+            <div class="mb-3">
+                <label>Windows</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="95">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Linux</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>CMS</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Laravel</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="80">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Git</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="75">0%</div>
                 </div>
             </div>
 
-            <div class="skills">
-                <div class="skill">
-                    <p>PHP</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 80%;"></div>
-                    </div>
+            <!-- Categoría: Hardware -->
+            <h4 class="mt-4">Hardware</h4>
+            <div class="mb-3">
+                <label>Reparación de equipos y mantenimiento</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Resolución de problemas</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Configuraciones de hardware y periféricos</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
                 </div>
             </div>
 
-            <div class="skills">
-                <div class="skill">
-                    <p>PostgreSQL</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 65%;"></div>
-                    </div>
+            <!-- Categoría: Redes -->
+            <h4 class="mt-4">Redes</h4>
+            <div class="mb-3">
+                <label>Configuración Windows Server y sus equipos clientes</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
                 </div>
             </div>
-            
-            <br>
-            <h3>Niveles de aplicaciones ofimáticas:</h3>
-            <br>
-            <div class="skills">
-                <div class="skill">
-                    <p>Procesadores de Textos (Documentos)</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
+            <div class="mb-3">
+                <label>Configuración de Ubuntu Server y sus equipos clientes</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 0%;" data-value="80">0%</div>
                 </div>
             </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Presentaciones</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
+            <div class="mb-3">
+                <label>Configuración general de protolos de servidores (DNS, DHCP, HTTPS)</label>
+                <div class="progress">
+                    <div class="progress-bar bg-warning text-dark" style="width: 0%;" data-value="70">0%</div>
                 </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Hojas de cálculo</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Base de Datos</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <h3>Niveles de softwares y sistemas operativos:</h3>
-            <br>
-            <div class="skills">
-                <div class="skill">
-                    <p>CMS (Wordpress, PrestaShop...)</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Uso de repositorios (GitHub...)</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 95%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Windows</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 95%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Linux</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 95%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <h3>Niveles de hardware:</h3>
-            <br>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Reparación de equipos y mantenimiento</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Resolución de problemas</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Configuración de hardware y periféricos</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <h3>Niveles en redes y conectividad:</h3>
-            <br>
-            <div class="skills">
-                <div class="skill">
-                    <p>Configuración de Windows Server y sus equipos clientes</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 95%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Configuración de Ubuntu Server y sus equipos clientes</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill">
-                    <p>Configuración de protocolos de internet (HTTP, DNS, IP, DHCP...)</p>
-                    <div class="barc" style="width: 100%;">
-                        <div class="bar" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="proyectos">
-            <h2>Proyectos y páginas web</h2>
-            <div class="project">
-                <div class="project-content">
-                    <h3><a id="paginaweb" href="https://minstrumental.github.io/minstrumental/" target="_blank">Página mInstrumental</a></h3>
-                    <p>(Página en proceso) Página web musical especialmente para la guitarra.</p>
-                </div>
-                <img src="images/mInstrumental.png" alt="Proyecto 5">
-            </div>
-
-            <hr> <br><br>
-
-            <div class="project">
-                <div class="project-content">
-                    <h3><a id="paginaweb" href="https://ismael-ivan.github.io/Kanban/" target="_blank">Página Kanban</a></h3>
-                    <p>Página web Kanban, para controlar actividades (Uso de localStorage). Hecha para M12 - Módulo de Síntesis.</p>
-                </div>
-                <img src="images/KanBan.png" alt="Proyecto 4">
-            </div>
-
-            <hr> <br><br>
-
-            <div class="project">
-                <div class="project-content">
-                    <h3><a id="paginaweb" href="https://ismael-ivan.github.io/GameDesign-IsmaelIvan/index.html" target="_blank">Página de Game Design</a></h3>
-                    <p>Página web acerca de las caractetísticas de los videojuegos. Hecha para M15 - Game Design.</p>
-                </div>
-                <img src="images/GameDesign.png" alt="Proyecto 3">
-            </div>
-
-            <hr> <br><br>
-
-            <div class="project">
-                <div class="project-content">
-                    <h3><a id="paginaweb" href="https://ismael-ivan.github.io/ElMonAnimal/" target="_blank">Página informativa del reino animal</a></h3>
-                    <p>Página web sencilla con información del reino animales. Hecha para M8 - Aplicaciones Web.</p>
-                </div>
-                <img src="images/elmonanimal.png" alt="Proyecto 2">
-            </div>
-
-            <hr> <br><br>
-
-            <div class="project">
-                <div class="project-content">
-                    <h3><a id="paginaweb" href="https://ismael-ivan.github.io/elsreisdelesconsoles/" target="_blank">Página informativa de videoconsolas</a></h3>
-                    <p>Página web sencilla con información de videoconsolas (Xbox, PlayStation y Nintendo). Hecha para M8 - Aplicaciones Web.</p>
-                </div>
-                <img src="images/elsreisdelesconsoles.png" alt="Proyecto 1">
             </div>
         </section>
 
-        <!--<section id="hobbies">
-            <h2>Hobbies</h2>
-        </section>-->
-    </div>
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2024 - 2025 Ismael Iván A. B. Todos los derechos reservados.</p>
-                <img src="images/creative_commons.jpg" alt="Creative Commons">
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="mb-5" data-aos="fade-left">
+            <h2 class="mb-4">Proyectos</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <!-- Proyecto 1 -->
+                <div class="col">
+                    <a href="https://www.minstrumental.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                        <img src="images/mInstrumental.png" class="card-img-top" alt="Imagen del proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">mInstrumental</h5>
+                            <p class="card-text">Proyecto final de CFGS, continuado como proyecto personal.</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="col">
+                    <a href="https://tracmove.es/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                        <img src="images/tracmove.png" class="card-img-top" alt="Imagen del proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tracmove Tracking Sports</h5>
+                            <p class="card-text">Rediseño total de página web para empresa Tracmove Tracking Sports con CMS WordPress.</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="col">
+                    <a href="https://ismael-ivan.github.io/Kanban/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                        <img src="images/KanBan.png" class="card-img-top" alt="Imagen del proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Kanban</h5>
+                            <p class="card-text">Página web Kanban, para controlar actividades (Uso de localStorage).</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="col">
+                    <a href="https://ismael-ivan.github.io/GameDesign-IsmaelIvan/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                        <img src="images/GameDesign.png" class="card-img-top" alt="Imagen del proyecto 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Game Design</h5>
+                            <p class="card-text">Página web acerca de las caractetísticas de los videojuegos. Hecha para M15 - Game Design.</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="col">
+                    <a href="https://ismael-ivan.github.io/ElMonAnimal/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                        <img src="images/elmonanimal.png" class="card-img-top" alt="Imagen del proyecto 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Mundo Animal</h5>
+                            <p class="card-text">Página web sencilla con información del reino animales. Hecha para M8 - Aplicaciones Web.</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="col">
+                    <a href="https://ismael-ivan.github.io/elsreisdelesconsoles/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                        <img src="images/elsreisdelesconsoles.png" class="card-img-top" alt="Imagen del proyecto 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Los reyes de las consolas</h5>
+                            <p class="card-text">Página web sencilla con información de videoconsolas (Xbox, PlayStation y Nintendo).</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
-        </footer>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+
+                <!-- Contacto -->
+                <div class="col-md-6 mb-3 text-center" id="contacto">
+                    <h5>Contacto</h5>
+                    <p class="mb-4">
+                        <strong><i class="fa-solid fa-envelope"></i> Email:</strong> <a href="mailto:aucaisma12@gmail.com">aucaisma12@gmail.com</a>
+                    </p>
+                    <p class="mb-4">
+                        <strong><i class="fa-solid fa-mobile-screen"></i> Teléfono:</strong> <a href="tel:+34642125575">+34 642 12 55 75</a>
+                    </p>
+                    <p class="mb-4">
+                        <strong><i class="fa-brands fa-linkedin"></i> LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/ismael-iván-aucapina-benalcázar" target="_blank" rel="noopener noreferrer">
+                            Ismael Iván Aucapina Benalcázar
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <strong><i class="fa-brands fa-github"></i> GitHub:</strong>
+                        <a href="https://github.com/Ismael-Ivan" target="_blank" rel="noopener noreferrer">
+                            Ismael-Ivan
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Información -->
+                <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
+                    <p class="mb-2">&copy; 2024 - 2025 Ismael Iván A. B.</p>
+                    <p>Todos los derechos reservados.</p>
+                    <img src="images/creative_commons.jpg" alt="Creative Commons" style="max-width: 100px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <button id="btnTop" class="btn btn-primary position-fixed" style="bottom: 20px; right: 20px; display: none; z-index: 999;">
+        <i class="fa-solid fa-circle-arrow-up"></i> SUBIR
+    </button>
+
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="js/script.js"></script>
