@@ -1,78 +1,60 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar AOS (Animaciones)
     AOS.init({
-        duration: 1000,
+        duration: 800,
         once: true
     });
 
-    const toggle = document.getElementById('toggle-dark');
-    const icon = toggle.querySelector('i');
+    // Lógica Modo Oscuro
+    const btnDark = document.getElementById('toggle-dark');
+    const body = document.body;
+    const icon = btnDark.querySelector('i');
 
-    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-
-    if (darkModeEnabled) {
-        document.body.classList.add('dark-mode');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+    // Comprobar preferencia guardada
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        icon.classList.replace('fa-moon', 'fa-sun');
     }
 
-    toggle.addEventListener('click', () => {
-        const isDark = document.body.classList.toggle('dark-mode');
-        localStorage.setItem('darkMode', isDark);
-
-        if (isDark) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
+    btnDark.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
         } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
         }
     });
 
+    // Animación de Barras de Progreso al hacer Scroll
+    const progressBars = document.querySelectorAll('.progress-bar');
+    
+    const showProgress = () => {
+        progressBars.forEach(bar => {
+            const value = bar.getAttribute('data-value');
+            const pos = bar.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.2;
 
-    function animateProgressBar(bar) {
-        const value = parseInt(bar.getAttribute('data-value'));
-        let current = 0;
-
-        bar.style.width = value + '%';
-
-        const interval = setInterval(() => {
-        if (current >= value) {
-            clearInterval(interval);
-        } else {
-            current++;
-            bar.textContent = current + '%';
-        }
-        }, 20);
-    }
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const bar = entry.target;
-            animateProgressBar(bar);
-            obs.unobserve(bar);
-        }
+            if (pos < screenPos) {
+                bar.style.width = `${value}%`;
+                bar.innerText = `${value}%`;
+            }
         });
-    }, {
-        threshold: 0.5
-    });
+    };
 
-    document.querySelectorAll('.progress-bar').forEach(bar => {
-        observer.observe(bar);
-    });
-
-    const btnTop = document.getElementById("btnTop");
-
-    window.addEventListener("scroll", () => {
+    // Botón Subir
+    const btnTop = document.getElementById('btnTop');
+    window.addEventListener('scroll', () => {
+        showProgress();
         if (window.scrollY > 300) {
-        btnTop.style.display = "block";
+            btnTop.style.display = "block";
         } else {
-        btnTop.style.display = "none";
+            btnTop.style.display = "none";
         }
     });
 
-    btnTop.addEventListener("click", () => {
-        window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-        });
+    btnTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+});
