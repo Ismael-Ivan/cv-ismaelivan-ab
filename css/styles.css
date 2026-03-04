@@ -1,101 +1,145 @@
 :root {
-    --primary-color: #0d6efd;
-    --dark-bg: #121212;
-    --light-bg: #f8f9fa;
-    --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    --transition: all 0.3s ease;
+    --bg-dark: #121212;
+    --bg-light: #ffffff;
+    --accent: #C5A059; /* Dorado formal */
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* General */
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    transition: background-color 0.4s, color 0.4s;
-    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
 }
 
-body.dark-mode {
-    background-color: var(--dark-bg);
-    color: #e0e0e0;
-}
-
-/* Navbar */
+/* Navbar Minimalista */
 .navbar {
-    backdrop-filter: blur(10px);
-    background-color: rgba(33, 37, 41, 0.95) !important;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #eeeeee;
+    padding: 1rem 0;
 }
 
-/* Perfil */
-.img-fluid.rounded-circle {
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
     transition: var(--transition);
-    border: 5px solid var(--primary-color) !important;
 }
 
-.img-fluid.rounded-circle:hover {
-    transform: scale(1.05) rotate(3deg);
+.nav-link:hover {
+    color: var(--accent) !important;
 }
 
-/* Progress Bars */
+/* Hero Section */
+#home {
+    padding: 100px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--bg-dark);
+}
+
+.accent-line {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 20px 0;
+}
+
+/* Cards de Proyectos Estilo Galería de Arte */
+.card {
+    border: none;
+    border-radius: 0; /* Bordes rectos para más formalidad */
+    background: #fff;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05) !important;
+}
+
+.card-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/* Habilidades (Barras minimalistas) */
 .progress {
-    height: 12px;
-    background-color: #e9ecef;
-    border-radius: 10px;
+    height: 4px; /* Muy delgadas para elegancia */
+    background-color: #e0e0e0;
     overflow: visible;
-    margin-bottom: 25px;
+    border-radius: 0;
 }
 
 .progress-bar {
-    border-radius: 10px;
+    background-color: var(--bg-dark) !important; /* Negro para contraste */
     position: relative;
-    transition: width 1.5s ease-in-out;
 }
 
-/* Cards de Proyectos */
-.card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: var(--transition);
-    background: #fff;
+/* Timeline de Experiencia */
+.experience-item {
+    border-left: 1px solid var(--accent);
+    padding-left: 25px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 9px;
+    height: 9px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+/* Footer Oscuro */
+footer {
+    background-color: var(--bg-dark) !important;
+    color: #fff !important;
+}
+
+footer a {
+    color: var(--accent) !important;
+    text-decoration: none;
+}
+
+/* Botón Dark Mode Toggle */
+#toggle-dark {
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    border-radius: 0;
+}
+
+/* Adaptación Modo Oscuro */
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background: rgba(18, 18, 18, 0.9) !important;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .nav-link, body.dark-mode h1 {
+    color: #fff !important;
 }
 
 body.dark-mode .card {
     background: #1e1e1e;
-    color: white;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.card:hover .card-img-top {
-    transform: scale(1.1);
-}
-
-/* Botón Subir */
-#btnTop {
-    border-radius: 50px;
-    padding: 10px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* Timeline estilo para Educación/Experiencia */
-section h5 {
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-top: 1.5rem;
-}
-
-body.dark-mode a {
-    color: #6ea8fe;
+    color: #fff;
 }
