@@ -1,430 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Ismael Iván Aucapina Benalcázar</title>
+    <title>Ismael Iván | Portafolio Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-aos="fade-down">
-        <div class="container-fluid">
-            <div class="d-flex gap-2">
-                <a class="btn btn-outline-light" id="toggle-dark"><i class="fa-solid fa-moon"></i></a>
-                <a href="docs/Curriculum - Ismael Iván Aucapina Benalcázar.pdf" class="btn btn-outline-light"><i class="fa-solid fa-eye"></i> Curriculum</a>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">ISMAEL<span>IVÁN</span></a>
+            
+            <div class="d-flex align-items-center order-lg-3 gap-2">
+                <button id="toggle-dark" class="btn-util" title="Cambiar modo"><i class="fa-solid fa-moon"></i></button>
+                <a href="docs/Curriculum - Ismael Iván Aucapina Benalcázar.pdf" class="btn-main d-none d-sm-block">CURRICULUM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="menu-icon"></span>
+                </button>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarContenido">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#educación">Educación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experiencia">Experiencia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#habilidades">Habilidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#proyectos">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container py-5">
-
-        <!-- Sección Home -->
-        <section id="home" class="mb-5" data-aos="fade-up">
+    <header id="home" class="hero d-flex align-items-center">
+        <div class="container">
             <div class="row align-items-center">
-                <!-- Columna izquierda -->
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h1 class="display-4">Ismael Iván Aucapina Benalcázar</h1>
-                    <div class="accent-line"></div>
-                    <h3 class="text-muted">Desarrollador de Aplicaciones Web · Técnico en Sistemas Microinformáticos y Redes</h3>
+                <div class="col-lg-7" data-aos="fade-up">
+                    <h2 class="text-accent mb-0">Full Stack & SysAdmin</h2>
+                    <h1 class="display-huge">Ismael Iván<br>Aucapina</h1>
+                    <p class="lead text-secondary mt-4 mb-5">Soluciones técnicas robustas. Especializado en desarrollo de aplicaciones web y gestión avanzada de infraestructuras de sistemas.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#proyectos" class="btn-main">VER TRABAJOS</a>
+                        <a href="#contacto" class="btn-outline">CONTACTAR</a>
+                    </div>
                 </div>
+                <div class="col-lg-5 text-center d-none d-lg-block" data-aos="zoom-in">
+                    <div class="hero-image-wrapper">
+                        <img src="images/img-perfil.png" alt="Perfil" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                <!-- Columna derecha -->
-                <div class="col-md-6 text-center">
-                    <a href="#">
-                        <img src="images/img-perfil.png" alt="Foto de perfil" class="img-fluid rounded-circle shadow" style="max-width: 250px; border: 2px solid white;">
-                    </a>
+    <main>
+        <section id="sobre-mi" class="section-padding">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h6 class="text-accent text-uppercase">Perfil</h6>
+                        <h2 class="section-title">Compromiso con la excelencia técnica</h2>
+                        <p>Soy un profesional apasionado por la informática, con un enfoque dual en el desarrollo de software y la infraestructura de sistemas. Mi metodología se basa en la organización, la investigación continua y la entrega puntual de soluciones robustas.</p>
+                        <p>Me adapto con agilidad a entornos de trabajo en equipo, aportando paciencia y una mentalidad analítica para la resolución de problemas complejos.</p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="interest-grid">
+                            <div class="interest-card"><span>Música</span><i class="fa-solid fa-piano"></i></div>
+                            <div class="interest-card"><span>Edición</span><i class="fa-solid fa-video"></i></div>
+                            <div class="interest-card"><span>Psicología</span><i class="fa-solid fa-brain"></i></div>
+                            <div class="interest-card"><span>Contabilidad</span><i class="fa-solid fa-calculator"></i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Sobre mí -->
-        <section id="sobre-mi" class="mb-5" data-aos="fade-up">
-            <h2 class="mb-3">Sobre mí</h2>
-            <p>Soy un joven que le encanta el ámbito de la informática, videojuegos y música. Mi enfoque se centra en buscar nuevas experiencias laborales para tener más conocimientos en nuevos ámbitos, para luego aplicarlas en futuros proyectos y trabajos.
-                <br>
-                <br>Me adapto fácilmente al trabajo en equipo, me encanta la organización, y la puntualidad en hacer y entregar proyectos. Tengo mucha paciencia, me gusta investigar y obtener información, para tener más conocimientos sobre como mejorar los trabajos.
-                <br>
-                <br>Mis puntos más fuertes en la informática son:
-                <br>1. Reparación y resolución de problemas en equipos tanto ámbito software como hardware.
-                <br>2. Conexión de equipos a través de dominios con protocolos de Internet.
-                <br>3. Uso de CMSs (Wordpress, Prestashop...).
-                <br>4. Lenguaje de programación para páginas web HTML y CSS.
-                <br>5. Uso de aplicaciones ofimáticas.
-                <br>6. Adaptabilidad fácil en Sistemas Operativos (Linux, Windows, ChromeOS).
-                <br>
-                <br>Otros conocimientos propios:
-                <br>1. Música (Guitarra, Piano, Ukelele)
-                <br>2. Edición de imágenes y vídeos (Adaptabilidad fácil de otros programas de edición)
-                <br>3. Psicología.
-                <br>4. Contabilidad.
-            </p>
-        </section>
-
-        <!-- Sección Educación -->
-        <section id="educación" class="mb-5" data-aos="fade-right">
-            <h2 class="mb-3">Educación</h2>
-
-            <h5>Ciclo Formativo Grado Superior - Institut Rafael Campalans (2023 - 2025)</h5>
-            <p>CFGS Desarrollador de Aplicaciones Web.</p>
-
-            <h5>Ciclo Formativo Grado Medio - Institut Rafael Campalans (2021 - 2023)</h5>
-            <p>CFGM Técnico en Sistemas Microinformáticos y Redes.</p>
-
-            <h5>CURSO (2021)</h5>
-            <p>Edición de imágenes.</p>
-            
-            <h5>CURSO (2021)</h5>
-            <p>Psicología.</p>
-
-            <h5>CURSO (2021)</h5>
-            <p>Contabilidad.</p>
-            
-            <h5>ESO - Institut Salvador Sunyer i Aimeric (2016 - 2020)</h5>
-            <p>Educación Secundaria Obligatoria.</p>
-        </section>
-
-        <!-- Sección Experiencia -->
-        <section id="experiencia" class="mb-5" data-aos="fade-left">
-            <h2 class="mb-3">Experiencia Laboral</h2>
-            
-            <div class="experience-item">
-                <h5>Tracmove Tracking Sports - Desarrollador de Aplicaciones Web (2024 - 2026)</h5>
-                <ul class="mt-2">
-                    <li>Uso de <i>APIs</i> para automatizar dispositivos de la empresa.</li>
-                    <li>Elaboración de un diagrama de casos de uso.</li>
-                    <li>Rediseño completo de la página web corporativa.</li>
-                    <li>Desarrollo de una aplicación pequeña en C#.</li>
-                    <li>Creación de una aplicación web utilizando Laravel.</li>
-                    <li>Asesoría en social media, diseño y organización para el crecimiento de la empresa.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h5>Aceena Computers - Atención al cliente (2024 - 2026)</h5>
-                <ul class="mt-2">
-                    <li>Cajero, reponedor y organización.</li>
-                    <li>Atención y asesoramiento al cliente.</li>
-                    <li>Cobro con datafóno.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h5>Institut Salvador Sunyer i Aimeric - Técnico en Sistemas Microinformáticos y Redes (2022 - 2023)</h5>
-                <small>Prácticas como Técnnico en Sistema Microinformáticos y Redes (383h).</small>
-                <ul class="mt-2">
-                    <li>Reparación y resolución de problemas en equipos tanto ámbito <i>software</i> como <i>hardware</i>.</li>
-                    <li>Conexión de equipos y dominios a través de las IPs y DNS.</li>
-                    <li>Aplicar Directivas de Grupos en Equipos con GPOs.</li>
-                    <li>Recomendar sistemas de seguridad para los equipos.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Sección Habilidades -->
-        <section id="habilidades" class="mb-5" data-aos="fade-right">
-            <h2 class="mb-4">Habilidades</h2>
-
-            <!-- Categoría: Lenguajes de programación -->
-            <h4 class="mt-4">Lenguajes de programación</h4>
-            <div class="mb-3">
-                <label>HTML</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-value="90">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>CSS</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>PHP</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="75">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>JavaScript</label>
-                <div class="progress">
-                    <div class="progress-bar bg-warning text-dark" style="width: 0%;" data-value="65">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>C#</label>
-                <div class="progress">
-                    <div class="progress-bar bg-warning text-dark" style="width: 0%;" data-value="55">0%</div>
-                </div>
-            </div>
-
-            <!-- Categoría: Ofimática -->
-            <h4 class="mt-4">Ofimática</h4>
-            <div class="mb-3">
-                <label>Procesadores de texto</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Presentaciones</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Hojas de cálculo</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">00%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Base de datos</label>
-                <div class="progress">
-                <div class="progress-bar bg-success" style="width: 0%;" data-value="75">0%</div>
-                </div>
-            </div>
-
-            <!-- Categoría: Sistemas operativos, software y herramientas -->
-            <h4 class="mt-4">Sistemas operativos, software y herramientas</h4>
-            <div class="mb-3">
-                <label>Windows</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="95">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Linux</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>CMS</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Laravel</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="80">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Git</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="75">0%</div>
-                </div>
-            </div>
-
-            <!-- Categoría: Hardware -->
-            <h4 class="mt-4">Hardware</h4>
-            <div class="mb-3">
-                <label>Reparación de equipos y mantenimiento</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Resolución de problemas</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Configuraciones de hardware y periféricos</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="85">0%</div>
-                </div>
-            </div>
-
-            <!-- Categoría: Redes -->
-            <h4 class="mt-4">Redes</h4>
-            <div class="mb-3">
-                <label>Configuración Windows Server y sus equipos clientes</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="90">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Configuración de Ubuntu Server y sus equipos clientes</label>
-                <div class="progress">
-                    <div class="progress-bar bg-success" style="width: 0%;" data-value="80">0%</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label>Configuración general de protolos de servidores (DNS, DHCP, HTTPS)</label>
-                <div class="progress">
-                    <div class="progress-bar bg-warning text-dark" style="width: 0%;" data-value="70">0%</div>
+        <section id="trayectoria" class="section-padding bg-soft">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <h3 class="mb-4 text-uppercase fw-bold"><i class="fa-solid fa-briefcase me-2"></i> Experiencia</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date">2024 - 2026</span>
+                                <h4>Tracmove Tracking Sports</h4>
+                                <p class="role">Desarrollador Web Full Stack</p>
+                                <ul class="small">
+                                    <li>Automatización vía APIs y desarrollo en Laravel.</li>
+                                    <li>Rediseño total de la identidad web corporativa.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">2024 - 2026</span>
+                                <h4>Aceena Computers</h4>
+                                <p class="role">Atención y Asesoramiento Técnico</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">2022 - 2023</span>
+                                <h4>Institut Salvador Sunyer</h4>
+                                <p class="role">Técnico de Sistemas (Prácticas)</p>
+                                <p class="small">Gestión de GPOs, resolución hardware/software y redes DNS.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="mb-4 text-uppercase fw-bold"><i class="fa-solid fa-graduation-cap me-2"></i> Formación</h3>
+                        <div class="education-list">
+                            <div class="edu-item">
+                                <h5>GS Desarrollador de Aplicaciones Web</h5>
+                                <p>Inst. Rafael Campalans | 2023 - 2025</p>
+                            </div>
+                            <div class="edu-item">
+                                <h5>GM Sistemas Microinformáticos y Redes</h5>
+                                <p>Inst. Rafael Campalans | 2021 - 2023</p>
+                            </div>
+                            <div class="edu-item d-flex gap-2 flex-wrap mt-3">
+                                <span class="badge-custom">Psicología</span>
+                                <span class="badge-custom">Contabilidad</span>
+                                <span class="badge-custom">Imagen</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Proyectos -->
-        <section id="proyectos" class="mb-5" data-aos="fade-left">
-            <h2 class="mb-4">Proyectos</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-                <!-- Proyecto 1 -->
-                <div class="col">
-                    <a href="https://www.minstrumental.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                        <div class="card h-100 shadow-sm">
-                        <img src="images/mInstrumental.png" class="card-img-top" alt="Imagen del proyecto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">mInstrumental</h5>
-                            <p class="card-text">Proyecto final de CFGS, continuado como proyecto personal. (Página activa hasta el 8-05-2026).</p>
-                        </div>
-                        </div>
-                    </a>
+        <section id="habilidades" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-down">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
                 </div>
-
-                <!-- Proyecto 2 -->
-                <div class="col">
-                    <a href="https://tracmove.es/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                        <div class="card h-100 shadow-sm">
-                        <img src="images/tracmove.png" class="card-img-top" alt="Imagen del proyecto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Tracmove Tracking Sports</h5>
-                            <p class="card-text">Rediseño total de página web para empresa Tracmove Tracking Sports con CMS WordPress.</p>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-box">
+                            <h5>Desarrollo Web</h5>
+                            <div class="skill-bar"><div class="fill" style="width: 90%;"><span>HTML/CSS</span></div></div>
+                            <div class="skill-bar"><div class="fill" style="width: 80%;"><span>PHP/Laravel</span></div></div>
+                            <div class="skill-bar"><div class="fill" style="width: 65%;"><span>JS / C#</span></div></div>
                         </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-box">
+                            <h5>Sistemas y Redes</h5>
+                            <div class="skill-bar"><div class="fill" style="width: 95%;"><span>Win/Linux OS</span></div></div>
+                            <div class="skill-bar"><div class="fill" style="width: 90%;"><span>GPO / Active Directory</span></div></div>
+                            <div class="skill-bar"><div class="fill" style="width: 85%;"><span>Hardware / Mantenimiento</span></div></div>
                         </div>
-                    </a>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-box">
+                            <h5>Herramientas</h5>
+                            <div class="skill-bar"><div class="fill" style="width: 85%;"><span>CMS (Wordpress)</span></div></div>
+                            <div class="skill-bar"><div class="fill" style="width: 90%;"><span>Ofimática Pro</span></div></div>
+                            <div class="skill-bar"><div class="fill" style="width: 75%;"><span>Git / GitHub</span></div></div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Proyecto 3 -->
-                <div class="col">
-                    <a href="https://ismael-ivan.github.io/Kanban/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                        <div class="card h-100 shadow-sm">
-                        <img src="images/KanBan.png" class="card-img-top" alt="Imagen del proyecto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Kanban</h5>
-                            <p class="card-text">Página web Kanban, para controlar actividades (Uso de localStorage).</p>
-                        </div>
-                        </div>
-                    </a>
+        <section id="proyectos" class="section-padding bg-dark text-white">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-right">
+                    <h2 class="section-title text-white mb-0">Selección de Proyectos</h2>
+                    <p class="text-secondary d-none d-md-block">Desarrollo y diseño funcional</p>
                 </div>
-
-                <!-- Proyecto 4 -->
-                <div class="col">
-                    <a href="https://ismael-ivan.github.io/GameDesign-IsmaelIvan/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                        <div class="card h-100 shadow-sm">
-                        <img src="images/GameDesign.png" class="card-img-top" alt="Imagen del proyecto 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Game Design</h5>
-                            <p class="card-text">Página web acerca de las caractetísticas de los videojuegos. Hecha para M15 - Game Design.</p>
-                        </div>
-                        </div>
-                    </a>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                        <a href="https://www.minstrumental.com/" target="_blank" class="project-item">
+                            <div class="project-img"><img src="images/mInstrumental.png" alt="mInstrumental"></div>
+                            <div class="project-info">
+                                <h5>mInstrumental</h5>
+                                <span>E-commerce / Personal</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                        <a href="https://tracmove.es/" target="_blank" class="project-item">
+                            <div class="project-img"><img src="images/tracmove.png" alt="Tracmove"></div>
+                            <div class="project-info">
+                                <h5>Tracmove</h5>
+                                <span>CMS / Rediseño Corporativo</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                        <a href="https://ismael-ivan.github.io/Kanban/" target="_blank" class="project-item">
+                            <div class="project-img"><img src="images/KanBan.png" alt="Kanban"></div>
+                            <div class="project-info">
+                                <h5>Kanban App</h5>
+                                <span>JavaScript Tool</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
-                <!-- Proyecto 5 -->
-                <div class="col">
-                    <a href="https://ismael-ivan.github.io/ElMonAnimal/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                        <div class="card h-100 shadow-sm">
-                        <img src="images/elmonanimal.png" class="card-img-top" alt="Imagen del proyecto 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Mundo Animal</h5>
-                            <p class="card-text">Página web sencilla con información del reino animales. Hecha para M8 - Aplicaciones Web.</p>
-                        </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Proyecto 6 -->
-                <div class="col">
-                    <a href="https://ismael-ivan.github.io/elsreisdelesconsoles/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-                        <div class="card h-100 shadow-sm">
-                        <img src="images/elsreisdelesconsoles.png" class="card-img-top" alt="Imagen del proyecto 6">
-                        <div class="card-body">
-                            <h5 class="card-title">Los reyes de las consolas</h5>
-                            <p class="card-text">Página web sencilla con información de videoconsolas (Xbox, PlayStation y Nintendo).</p>
-                        </div>
-                        </div>
-                    </a>
-                </div>
-
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-light py-4 mt-5" data-aos="fade-up">
+    <footer id="contacto" class="footer">
         <div class="container">
-            <div class="row">
-
-                <!-- Contacto -->
-                <div class="col-md-6 mb-3 text-center" id="contacto">
-                    <h5>Contacto</h5>
-                    <p class="mb-4">
-                        <strong><i class="fa-solid fa-envelope"></i> Email:</strong> <a href="mailto:aucaisma12@gmail.com">aucaisma12@gmail.com</a>
-                    </p>
-                    <p class="mb-4">
-                        <strong><i class="fa-solid fa-mobile-screen"></i> Teléfono:</strong> <a href="tel:+34642125575">+34 642 12 55 75</a>
-                    </p>
-                    <p class="mb-4">
-                        <strong><i class="fa-brands fa-linkedin"></i> LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/in/ismael-iván-aucapina-benalcázar" target="_blank" rel="noopener noreferrer">
-                            Ismael Iván Aucapina Benalcázar
-                        </a>
-                    </p>
-                    <p class="mb-0">
-                        <strong><i class="fa-brands fa-github"></i> GitHub:</strong>
-                        <a href="https://github.com/Ismael-Ivan" target="_blank" rel="noopener noreferrer">
-                            Ismael-Ivan
-                        </a>
-                    </p>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">¿Tienes un proyecto en mente?</h2>
+                    <div class="contact-data">
+                        <a href="mailto:aucaisma12@gmail.com" class="c-link">aucaisma12@gmail.com</a>
+                        <a href="tel:+34642125575" class="c-link">+34 642 12 55 75</a>
+                    </div>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
-
-                <!-- Información -->
-                <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
-                    <p class="mb-2">&copy; 2024 - 2026 Ismael Iván A. B.</p>
-                    <p>Todos los derechos reservados.</p>
-                    <img src="images/creative_commons.jpg" alt="Creative Commons" style="max-width: 100px;">
+                <div class="col-lg-6 text-lg-end text-center">
+                    <p class="mb-0 opacity-50">&copy; 2026 Ismael Iván Aucapina.</p>
+                    <p class="small opacity-50">Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <button id="btnTop"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <button id="btnTop" class="btn btn-primary position-fixed" style="bottom: 20px; right: 20px; display: none; z-index: 999;">
-        <i class="fa-solid fa-circle-arrow-up"></i> SUBIR
-    </button>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="js/script.js"></script>
-
-
-
