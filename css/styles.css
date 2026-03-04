@@ -1,143 +1,110 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #121212;
-    --accent: #b89a5e; /* Dorado sutil para formalidad */
-    --soft-bg: #f5f5f7;
-    --dark-bg: #121212;
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --primary: #000000;
+    --accent: #C5A059;
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --gray-light: #f8f9fa;
+    --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    overflow-x: hidden;
-}
+/* Globales Responsive */
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
 
-/* Navbar */
-.navbar {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    padding: 1.5rem 0;
-}
-
-.navbar-brand {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    letter-spacing: -1px;
-    font-size: 1.5rem;
-    color: var(--text-color) !important;
-}
-
-.navbar-brand span { color: var(--accent); }
-
-.nav-link {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 0 1.5rem !important;
-    color: var(--text-color) !important;
-    transition: var(--transition);
-}
-
-.nav-link:hover { color: var(--accent) !important; }
-
-/* Botones */
-.btn-main {
-    background: var(--text-color);
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+/* Profile Image & Responsive */
+.profile-container {
+    position: relative;
     display: inline-block;
+}
+
+.img-profile-main {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 991px) {
+    .img-profile-main { width: 220px; height: 220px; margin-top: 2rem; }
+    .display-huge { font-size: 3.5rem !important; }
+}
+
+/* Sección Música */
+.music-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.m-badge {
+    background: rgba(255,255,255,0.1);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    border: 1px solid var(--accent);
+}
+
+.music-visual {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.wave-bar {
+    width: 10px;
+    background: var(--accent);
+    height: 40px;
+    animation: musicWave 1.2s infinite ease-in-out;
+}
+
+@keyframes musicWave {
+    0%, 100% { height: 40px; }
+    50% { height: 100px; }
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: var(--gray-light);
+    padding: 30px;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid #eee;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
+.contact-card:hover { 
+    background: var(--primary); 
+    color: white; 
+    transform: translateY(-10px);
+}
+
+/* Botones & Nav */
+.btn-outline-dark {
+    border: 2px solid var(--primary);
+    padding: 12px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary);
     transition: var(--transition);
 }
 
-.btn-main:hover {
-    background: var(--accent);
-    color: white;
-    transform: translateY(-3px);
-}
+.btn-outline-dark:hover { background: var(--primary); color: white; }
 
-.btn-util {
-    background: none;
-    border: 1px solid rgba(0,0,0,0.1);
-    width: 40px;
-    height: 40px;
-}
-
-/* Secciones */
-.section-padding { padding: 100px 0; }
-.bg-soft { background-color: var(--soft-bg); }
-
-.display-huge {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    line-height: 0.9;
-    font-weight: 800;
-    margin-top: 10px;
-}
-
-.text-accent { color: var(--accent); font-weight: 600; }
-
-/* Timeline Experiencia */
-.timeline { border-left: 1px solid #ddd; padding-left: 30px; }
-.timeline-item { position: relative; margin-bottom: 40px; }
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -35px; top: 0;
-    width: 10px; height: 10px;
-    background: var(--accent);
-    border-radius: 50%;
-}
-
-/* Skills */
-.skill-box { background: white; padding: 30px; border: 1px solid #eee; }
-.skill-bar { height: 6px; background: #eee; margin: 25px 0; position: relative; }
-.skill-bar .fill {
-    height: 100%;
-    background: var(--text-color);
-    position: relative;
-}
-.skill-bar span {
-    position: absolute;
-    top: -25px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* Project Cards */
-.project-item {
-    display: block;
-    text-decoration: none;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-img { height: 250px; background: #222; overflow: hidden; }
-.project-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); opacity: 0.6; }
-.project-info { padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.1); }
-.project-item:hover .project-img img { transform: scale(1.1); opacity: 1; }
-
-/* Dark Mode */
+/* Dark Mode Extendido */
 body.dark-mode {
-    --bg-color: #0a0a0a;
-    --text-color: #ffffff;
-    --soft-bg: #121212;
+    --bg: #0d0d0d;
+    --text: #ffffff;
+    --gray-light: #1a1a1a;
 }
-body.dark-mode .navbar { background: rgba(10,10,10,0.9); border-bottom-color: #222; }
-body.dark-mode .skill-box { background: #1a1a1a; border-color: #333; }
-body.dark-mode .btn-util { border-color: #333; color: white; }
-
-#btnTop {
-    position: fixed; bottom: 30px; right: 30px;
-    background: var(--accent); color: white;
-    border: none; width: 50px; height: 50px;
-    display: none; z-index: 1000;
-}
+body.dark-mode .navbar { background: rgba(13, 13, 13, 0.95); border-bottom: 1px solid #222; }
+body.dark-mode .contact-card { border-color: #333; }
