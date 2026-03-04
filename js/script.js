@@ -1,45 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar animaciones AOS
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-out-cubic',
-        once: true
-    });
+    // 1. Inicializar AOS (Animaciones)
+    AOS.init({ duration: 1000, once: true });
 
-    // Toggle de Modo Oscuro con Persistencia
+    // 2. Dark Mode persistente
     const btnDark = document.getElementById('toggle-dark');
     const body = document.body;
 
-    const enableDarkMode = () => {
-        body.classList.add('dark-mode');
-        btnDark.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        localStorage.setItem('theme', 'dark');
+    const toggleTheme = () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        btnDark.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     };
 
-    const disableDarkMode = () => {
-        body.classList.remove('dark-mode');
-        btnDark.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        localStorage.setItem('theme', 'light');
-    };
+    btnDark.addEventListener('click', toggleTheme);
+    if (localStorage.getItem('theme') === 'dark') toggleTheme();
 
-    btnDark.addEventListener('click', () => {
-        body.classList.contains('dark-mode') ? disableDarkMode() : enableDarkMode();
+    // 3. Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('#mainNav');
+        const btnTop = document.getElementById('btnTop');
+        
+        if (window.scrollY > 50) {
+            nav.style.padding = '0.8rem 0';
+            btnTop.style.display = 'block';
+        } else {
+            nav.style.padding = '1.5rem 0';
+            btnTop.style.display = 'none';
+        }
     });
 
-    // Cargar preferencia
-    if (localStorage.getItem('theme') === 'dark') enableDarkMode();
-
-    // Animación suave para barras de progreso
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const bar = entry.target;
-                const val = bar.getAttribute('data-value');
-                bar.style.width = val + '%';
-                observer.unobserve(bar);
+    // 4. Smooth scroll y cerrar menú en móvil
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('navMenu');
+            if (window.innerWidth < 992) {
+                new bootstrap.Collapse(menu).hide();
             }
         });
-    }, { threshold: 0.5 });
+    });
 
-    document.querySelectorAll('.progress-bar').forEach(bar => observer.observe(bar));
+    // 5. Botón Subir
+    document.getElementById('btnTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
