@@ -1,37 +1,101 @@
-.card:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
+:root {
+    --primary-color: #0d6efd;
+    --dark-bg: #121212;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* General */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.4s, color 0.4s;
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: #e0e0e0;
+}
+
+/* Navbar */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(33, 37, 41, 0.95) !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Perfil */
+.img-fluid.rounded-circle {
+    transition: var(--transition);
+    border: 5px solid var(--primary-color) !important;
+}
+
+.img-fluid.rounded-circle:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+/* Progress Bars */
+.progress {
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: visible;
+    margin-bottom: 25px;
 }
 
 .progress-bar {
-    transition: width 2s ease-in-out;
+    border-radius: 10px;
+    position: relative;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Cards de Proyectos */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+    background: #fff;
+}
+
+body.dark-mode .card {
+    background: #1e1e1e;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Botón Subir */
+#btnTop {
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Timeline estilo para Educación/Experiencia */
+section h5 {
+    color: var(--primary-color);
     font-weight: bold;
+    margin-top: 1.5rem;
 }
 
-footer a {
-    color: #f1f1f1;
-}
-
-footer a:hover {
-    color: #cfcfcf;
-}
-
-.dark-mode {
-    background-color: #121212 !important;
-    color: #f1f1f1 !important;
-}
-
-.dark-mode .text-muted {
-    color: #f1f1f1 !important;
-}
-
-.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #f1f1f1;
-}
-
-.dark-mode .list-group-item {
-    background-color: #1e1e1e;
-    color: #f1f1f1;
+body.dark-mode a {
+    color: #6ea8fe;
 }
