@@ -1,110 +1,223 @@
+/* --- VARIABLES Y CONFIGURACIÓN GLOBAL --- */
 :root {
-    --primary: #000000;
-    --accent: #C5A059;
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --gray-light: #f8f9fa;
-    --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    --primary-color: #0d6efd;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f9fa;
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Globales Responsive */
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
+html {
+    scroll-behavior: smooth;
+}
 
-/* Profile Image & Responsive */
-.profile-container {
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #fff;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* --- MODO OSCURO (DARK MODE) --- */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #fff;
+}
+
+body.dark-mode .card {
+    background-color: #242424;
+    border-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .text-muted {
+    color: #aaa !important;
+}
+
+body.dark-mode .list-unstyled li {
+    color: #ccc;
+}
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* --- SECCIÓN HOME Y FOTO (RESPONSIVE) --- */
+.profile-wrapper {
     position: relative;
     display: inline-block;
 }
 
-.img-profile-main {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 8px solid white;
-    position: relative;
-    z-index: 2;
-}
-
-@media (max-width: 991px) {
-    .img-profile-main { width: 220px; height: 220px; margin-top: 2rem; }
-    .display-huge { font-size: 3.5rem !important; }
-}
-
-/* Sección Música */
-.music-badges { display: flex; gap: 10px; flex-wrap: wrap; }
-.m-badge {
-    background: rgba(255,255,255,0.1);
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    border: 1px solid var(--accent);
-}
-
-.music-visual {
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.wave-bar {
-    width: 10px;
-    background: var(--accent);
-    height: 40px;
-    animation: musicWave 1.2s infinite ease-in-out;
-}
-
-@keyframes musicWave {
-    0%, 100% { height: 40px; }
-    50% { height: 100px; }
-}
-
-/* Contact Grid */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.contact-card {
-    background: var(--gray-light);
-    padding: 30px;
-    text-decoration: none;
-    color: var(--text);
-    border: 1px solid #eee;
+.profile-img-responsive {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border: 6px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     transition: var(--transition);
+}
+
+.profile-img-responsive:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .profile-img-responsive {
+        max-width: 180px;
+        margin-top: 20px;
+    }
+    header.text-md-start {
+        text-align: center !important;
+    }
+}
+
+/* --- SECCIONES GENERALES --- */
+section {
+    padding-top: 20px;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* --- SECCIÓN MÚSICA --- */
+#musica {
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+    border: none;
+}
+
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.6em 1em;
+}
+
+/* --- LÍNEA DE TIEMPO (EDUCACIÓN) --- */
+.timeline {
+    position: relative;
+}
+
+.timeline h5 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* --- HABILIDADES (PROGRESS BARS) --- */
+.progress {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.progress-bar {
+    border-radius: 5px;
+    position: relative;
+    transition: width 1.5s ease-in-out;
+}
+
+/* --- TARJETAS DE PROYECTOS --- */
+.project-card {
+    border: none;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.project-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* --- FOOTER Y CONTACTO UNIFICADO --- */
+.contact-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.contact-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
-.contact-card:hover { 
-    background: var(--primary); 
-    color: white; 
-    transform: translateY(-10px);
-}
-
-/* Botones & Nav */
-.btn-outline-dark {
-    border: 2px solid var(--primary);
-    padding: 12px 30px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--primary);
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
     transition: var(--transition);
+    height: 100%;
 }
 
-.btn-outline-dark:hover { background: var(--primary); color: white; }
-
-/* Dark Mode Extendido */
-body.dark-mode {
-    --bg: #0d0d0d;
-    --text: #ffffff;
-    --gray-light: #1a1a1a;
+.contact-icon:hover {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.05);
 }
-body.dark-mode .navbar { background: rgba(13, 13, 13, 0.95); border-bottom: 1px solid #222; }
-body.dark-mode .contact-card { border-color: #333; }
+
+.contact-icon i {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-icon p {
+    margin-bottom: 0;
+    word-break: break-all; /* Evita que el email largo rompa el diseño en móvil */
+}
+
+/* --- BOTÓN SUBIR --- */
+#btnTop {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/* --- UTILIDADES --- */
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
