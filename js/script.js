@@ -1,60 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar AOS (Animaciones)
+    // Inicializar animaciones AOS
     AOS.init({
-        duration: 800,
+        duration: 1000,
+        easing: 'ease-out-cubic',
         once: true
     });
 
-    // Lógica Modo Oscuro
+    // Toggle de Modo Oscuro con Persistencia
     const btnDark = document.getElementById('toggle-dark');
     const body = document.body;
-    const icon = btnDark.querySelector('i');
 
-    // Comprobar preferencia guardada
-    if (localStorage.getItem('theme') === 'dark') {
+    const enableDarkMode = () => {
         body.classList.add('dark-mode');
-        icon.classList.replace('fa-moon', 'fa-sun');
-    }
-
-    btnDark.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-            icon.classList.replace('fa-moon', 'fa-sun');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            icon.classList.replace('fa-sun', 'fa-moon');
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // Animación de Barras de Progreso al hacer Scroll
-    const progressBars = document.querySelectorAll('.progress-bar');
-    
-    const showProgress = () => {
-        progressBars.forEach(bar => {
-            const value = bar.getAttribute('data-value');
-            const pos = bar.getBoundingClientRect().top;
-            const screenPos = window.innerHeight / 1.2;
-
-            if (pos < screenPos) {
-                bar.style.width = `${value}%`;
-                bar.innerText = `${value}%`;
-            }
-        });
+        btnDark.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
     };
 
-    // Botón Subir
-    const btnTop = document.getElementById('btnTop');
-    window.addEventListener('scroll', () => {
-        showProgress();
-        if (window.scrollY > 300) {
-            btnTop.style.display = "block";
-        } else {
-            btnTop.style.display = "none";
-        }
+    const disableDarkMode = () => {
+        body.classList.remove('dark-mode');
+        btnDark.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
+    };
+
+    btnDark.addEventListener('click', () => {
+        body.classList.contains('dark-mode') ? disableDarkMode() : enableDarkMode();
     });
 
-    btnTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    // Cargar preferencia
+    if (localStorage.getItem('theme') === 'dark') enableDarkMode();
+
+    // Animación suave para barras de progreso
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const val = bar.getAttribute('data-value');
+                bar.style.width = val + '%';
+                observer.unobserve(bar);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.progress-bar').forEach(bar => observer.observe(bar));
 });
